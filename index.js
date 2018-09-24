@@ -16,6 +16,7 @@ for (let i = 0; i < changeColor.length; i++) {
 
 function grabColor(event) {
     currentColor = event.target.id
+    console.log(currentColor)
 }
 
 for (let i = 0; i < penColor.length; i++) {
@@ -23,15 +24,10 @@ for (let i = 0; i < penColor.length; i++) {
 }
 
 function applyColor(event) {
-    if (event.target.style.backgroundColor && event.target.style.backgroundColor != currentColor) {
-        event.target.style.backgroundColor = currentColor
-    } else {
-        event.target.backgroundColor = currentColor
-    }
-
+    event.target.style.backgroundColor = currentColor
 }
 
-paintBox.addEventListener("click", grabColor, applyColor)
+// paintBox.addEventListener("click", grabColor)
 
 // var paintBox = document.getElementById('art')
 
